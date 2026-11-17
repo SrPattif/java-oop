@@ -6,9 +6,6 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 
-/**
- * Cliente que realiza pedidos (contexto de CRM).
- */
 @Entity
 public class Cliente {
 
@@ -26,7 +23,6 @@ public class Cliente {
     private String telefone;
 
     protected Cliente() {
-        // exigido pelo JPA
     }
 
     public Cliente(String nome, String email, String telefone) {

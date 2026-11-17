@@ -19,10 +19,6 @@ import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
 import jakarta.persistence.OneToMany;
 
-/**
- * Pedido de compra de um cliente (contexto de ERP).
- * Concentra as regras de negócio do próprio pedido: itens, total e mudança de status.
- */
 @Entity
 public class Pedido {
 
@@ -45,7 +41,6 @@ public class Pedido {
     private List<ItemPedido> itens = new ArrayList<>();
 
     protected Pedido() {
-        // exigido pelo JPA
     }
 
     public Pedido(Cliente cliente) {
@@ -54,9 +49,6 @@ public class Pedido {
         this.status = StatusPedido.PENDENTE;
     }
 
-    /**
-     * Adiciona um produto ao pedido, retirando a quantidade do estoque.
-     */
     public void adicionarItem(Produto produto, int quantidade) {
         if (status != StatusPedido.PENDENTE) {
             throw new RegraNegocioException("Só é possível adicionar itens a pedidos pendentes.");
@@ -71,10 +63,6 @@ public class Pedido {
                 .reduce(BigDecimal.ZERO, BigDecimal::add);
     }
 
-    /**
-     * Muda o status do pedido respeitando o fluxo permitido.
-     * Ao cancelar, os itens voltam para o estoque.
-     */
     public void alterarStatus(StatusPedido novoStatus) {
         if (!status.podeMudarPara(novoStatus)) {
             throw new RegraNegocioException(

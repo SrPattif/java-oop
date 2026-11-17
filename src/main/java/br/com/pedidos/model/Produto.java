@@ -10,9 +10,6 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 
-/**
- * Produto vendido pela empresa, com controle de estoque (contexto de ERP).
- */
 @Entity
 public class Produto {
 
@@ -53,9 +50,6 @@ public class Produto {
         this.estoque = estoque;
     }
 
-    /**
-     * Retira itens do estoque. O próprio produto garante que o estoque nunca fique negativo.
-     */
     public void baixarEstoque(int quantidade) {
         validarQuantidade(quantidade);
         if (quantidade > estoque) {

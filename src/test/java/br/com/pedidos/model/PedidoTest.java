@@ -11,9 +11,6 @@ import org.junit.jupiter.api.Test;
 import br.com.pedidos.exception.EstoqueInsuficienteException;
 import br.com.pedidos.exception.RegraNegocioException;
 
-/**
- * Testes unitários das regras de negócio do domínio (sem Spring e sem banco).
- */
 class PedidoTest {
 
     private Produto notebook;

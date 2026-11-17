@@ -9,9 +9,6 @@ import org.springframework.web.bind.MethodArgumentNotValidException;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
 
-/**
- * Converte as exceções da aplicação em respostas HTTP com status e mensagem adequados.
- */
 @RestControllerAdvice
 public class GlobalExceptionHandler {
 

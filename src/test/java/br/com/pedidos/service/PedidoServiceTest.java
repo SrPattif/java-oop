@@ -27,9 +27,6 @@ import br.com.pedidos.model.Pedido;
 import br.com.pedidos.model.Produto;
 import br.com.pedidos.repository.PedidoRepository;
 
-/**
- * Testes da camada de serviço isolada com Mockito (sem subir o Spring).
- */
 @ExtendWith(MockitoExtension.class)
 class PedidoServiceTest {
 

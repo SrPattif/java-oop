@@ -10,10 +10,6 @@ import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
 
-/**
- * Item de um pedido. Guarda o preço do produto no momento da compra,
- * para que alterações futuras de preço não mudem pedidos antigos.
- */
 @Entity
 public class ItemPedido {
 
@@ -36,7 +32,6 @@ public class ItemPedido {
     private BigDecimal precoUnitario;
 
     protected ItemPedido() {
-        // exigido pelo JPA
     }
 
     ItemPedido(Pedido pedido, Produto produto, int quantidade) {

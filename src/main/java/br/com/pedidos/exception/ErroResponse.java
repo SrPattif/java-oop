@@ -3,9 +3,6 @@ package br.com.pedidos.exception;
 import java.time.LocalDateTime;
 import java.util.List;
 
-/**
- * Corpo padronizado das respostas de erro da API.
- */
 public record ErroResponse(
         LocalDateTime timestamp,
         int status,

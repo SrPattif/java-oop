@@ -48,10 +48,6 @@ public class PedidoService {
         return PedidoResponse.de(buscarEntidade(id));
     }
 
-    /**
-     * Cria o pedido e dá baixa no estoque de cada produto.
-     * Se qualquer item não tiver estoque, a transação inteira é desfeita.
-     */
     @Transactional
     public PedidoResponse criar(PedidoRequest request) {
         Cliente cliente = clienteService.buscarEntidade(request.clienteId());

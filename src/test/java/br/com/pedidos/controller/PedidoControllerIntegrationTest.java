@@ -24,10 +24,6 @@ import br.com.pedidos.model.Produto;
 import br.com.pedidos.repository.ClienteRepository;
 import br.com.pedidos.repository.ProdutoRepository;
 
-/**
- * Teste de integração: sobe a aplicação completa (Controller -> Service -> Repository -> H2)
- * e faz requisições HTTP simuladas na API.
- */
 @SpringBootTest
 @AutoConfigureMockMvc
 @Transactional

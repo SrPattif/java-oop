@@ -2,12 +2,6 @@ package br.com.pedidos.model;
 
 import java.util.Set;
 
-/**
- * Ciclo de vida de um pedido. Cada status sabe para quais outros pode avançar.
- *
- * PENDENTE -> PAGO -> ENVIADO -> ENTREGUE
- * PENDENTE / PAGO -> CANCELADO
- */
 public enum StatusPedido {
 
     PENDENTE,
